@@ -1,0 +1,44 @@
+<link href="/assets/application-9bd64a86adb3cd9ab3b16e9dca67a33a.css"
+rel="stylesheet" type="text/css" data-turbolinks-track>
+<h1>Edit Post:</h1>
+
+
+
+<%= form_for(@post) do |f| %>
+
+  
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </br>
+</br>
+ <table width = "100%">
+<tr>
+<td>  <%= f.label :text %></td>
+<td><%= f.label :expec %></td>
+<td><%= f.label :notes %></td>
+</tr>
+
+</tr>
+<td><%= f.text_area :text %></td>
+ 
+<td><%= f.text_area :expec %></td>
+ 
+<td><%= f.text_area :notes %></td>
+</tr>
+ <tr>
+  
+    <td><%= f.submit %></td>
+  
+</tr>
+</table>
+<% end %>
+
+
+ 
+<nav>
+<ul>
+<li>
+<%= link_to '<- Back', posts_path %>
+</li>
+</ul>
+</nav>

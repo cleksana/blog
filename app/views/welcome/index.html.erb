@@ -1,0 +1,49 @@
+
+<html>
+<link href="/assets/application.css"
+rel="stylesheet" type="text/css" data-turbolinks-track>
+<head>
+
+</head>
+
+<body>
+
+
+<h1>Our web page!</h1>
+<h2>Web-Based Catalog</h2>
+
+</br>
+</br>
+<div align = "center">
+<nav>
+	<ul>
+
+		    <li>
+        <%= link_to "Home", controller:"welcome" %>
+    </li>
+
+    <li>
+        <%= link_to "iPhone", controller:"posts" %>
+        <ul>
+            <li><%= link_to "3.6.1", controller:"posts" %></li>
+
+            <li><%= link_to "3.6.2", controller:"posts" %></li>
+        </ul>
+    </li>
+    <li>
+        <%= link_to "Android", controller:"posts" %>
+
+        <ul>
+            <li><%= link_to "3.3", controller:"posts" %></li>
+            <li><%= link_to "3.3.1", controller:"posts" %></li>
+        </ul>
+
+    </li>
+
+</ul>
+</nav>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<link href="/assets/application.css"
+rel="stylesheet" type="text/css" data-turbolinks-track>
+<%= form_for :post, url: post_path(@post.id),
+method: :patch do |f| %>
+
+<p>
+  <h1>Title:</h1>
+  <h3><%= @post.title %></h3>
+</p>
+ 
+<p>
+  <h1>Case:</h1>
+<table class = "table1">
+<tr>
+<th>Steps:</th>
+<th>Expectations: </th>
+<th>Notes: </th>
+<tr>
+<td><p1><%= simple_format(@post.text) %></p1></td>
+<td><p1><%= simple_format(@post.expec) %></p1></td>
+<td><p1><%= simple_format(@post.notes) %></p1></td>
+</tr>
+</table>
+</p>
+<% end %>
+ 
+<nav>
+<ul>
+
+<li>
+<%= link_to '<- Back', posts_path %>
+</li>
+
+
+<li>
+<%= link_to 'Edit', edit_post_path(@post) %>
+</li>
+
+
+</ul>
+</nav>
